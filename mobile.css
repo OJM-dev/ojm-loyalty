@@ -1,0 +1,121 @@
+/* Responsive layout shared by the English and Arabic interfaces. */
+main,#content,.panel,.stats,.stat,.panelHead,.panelHead>div,.guide>div,.toolbar,.headerActions{min-width:0}
+.stat em,.statusline,.notice,#previewName,#creditStatus,#balanceStatus{overflow-wrap:anywhere}
+#mobileMenu{display:none}
+@media(max-width:900px){
+ body{display:block;min-width:0}
+ body.cloud-ready>aside,html[dir=rtl] body.cloud-ready>aside{position:relative;inset:auto;width:100%;height:auto;max-height:none;padding:16px 20px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;overflow:visible}
+ aside .brand{grid-column:1;grid-row:1;direction:ltr;text-align:start}
+ html[dir=rtl] aside .brand{text-align:end}
+ aside .brand b{font-size:29px;line-height:1}
+ aside .brand small,aside .workspace{display:none}
+ #accountEmail{grid-column:1;grid-row:2;min-width:0;max-width:100%;margin:0;font-size:11px;line-height:1.6;overflow-wrap:anywhere}
+ #mobileMenu{display:block;grid-column:2;grid-row:1 / span 2;align-self:center;min-width:46px;min-height:46px;font-size:24px;line-height:1;background:#31524b;color:white;border-color:#57736b;padding:7px 12px}
+ aside nav,aside .local{grid-column:1 / -1;display:none!important}
+ aside[data-menu-open=true] nav{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px;overflow:visible}
+ nav button{min-height:48px;white-space:normal;gap:8px;padding:10px;font-size:12px;align-items:center}
+ nav button span{font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+ aside[data-menu-open=true] .local{display:grid!important;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0 0;padding:14px 0 0;border-top:1px solid #45665a;font-size:0}
+ .local i,.local p{display:none!important}
+ aside .local #backup,aside .local .restore,aside .local #resetAll{display:flex!important;align-items:center;justify-content:center;width:100%;min-height:44px;margin:0;padding:10px;font-size:12px;border:1px solid #57736b;border-radius:6px;line-height:1.5;white-space:normal;text-align:center}
+ aside .local #resetAll{grid-column:1 / -1;color:#ffd4c1;border-color:#956e59}
+ main,html[dir=rtl] main{margin:0;width:100%;max-width:100%;padding:0 20px}
+ header{height:auto;min-height:76px;padding:14px 0;gap:10px;flex-wrap:wrap}
+ header>div:first-child{font-size:10px;letter-spacing:1px;line-height:1.6}
+ header span{margin:0 5px}
+ .headerActions{width:100%;display:flex;align-items:center;justify-content:flex-start;gap:8px}
+ .headerActions button,#languageSwitch{min-height:40px;font-size:12px;padding:8px 12px}
+ #cloudStatus{display:inline-block!important;max-width:100%;font-size:11px;margin:0;white-space:normal;line-height:1.5}
+ .intro{display:flex;align-items:flex-start;flex-direction:column;padding:26px 0 22px;gap:18px}
+ h1{font-size:28px;line-height:1.4;letter-spacing:-.7px;margin:9px 0}
+ .intro p{font-size:14px;line-height:1.7;margin:0}
+ .eyebrow{font-size:10px;line-height:1.6}
+ .period{display:block;width:100%;margin:0;padding:12px 16px}
+ .period label{font-size:11px}
+ .period input{width:100%;font-size:16px;min-height:35px}
+ .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:22px}
+ .stat{padding:15px;min-width:0}
+ .stat small{font-size:12px;line-height:1.5;display:block}
+ .stat b{font-size:28px;margin:6px 0}
+ .stat em{font-size:11px;line-height:1.5;display:block}
+ .panelHead{padding:18px;flex-direction:column;align-items:stretch;gap:12px}
+ .panelHead h2{font-size:19px;line-height:1.5}
+ .panelHead p{font-size:13px;line-height:1.7}
+ .panelHead .badge{align-self:flex-start;white-space:normal}
+ .panelHead .actionRow{flex-wrap:wrap}
+ .actionRow button{white-space:normal;min-height:44px;line-height:1.5}
+ .guide{grid-template-columns:minmax(0,1fr)!important;padding:20px!important;gap:22px}
+ .guide b{font-size:14px;line-height:1.6}
+ .guide p{font-size:13px;margin:9px 0;line-height:1.7}
+ .filePicker{min-height:46px;display:flex;align-items:center;justify-content:center;font-size:14px;width:100%}
+ .toolbar{padding:16px 18px;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+ .toolbar input.search{width:100%;min-width:0}
+ input,select{font-size:16px;min-height:44px}
+ .toolbar select{width:100%}
+ button,.primary{min-height:44px;line-height:1.5}
+ .toolbar>.primary{width:100%;font-size:14px}
+ .statusline{padding:14px 18px;font-size:12px;line-height:1.8}
+ .notice{font-size:13px;line-height:1.9!important;padding:14px;margin:16px 0}
+ .panel>.notice{margin:16px 18px!important}
+ .scroll{overflow:visible;max-height:none;padding:4px 14px 14px}
+ .scroll table,.scroll tbody{display:block;width:100%}
+ .scroll thead{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+ .scroll tbody{display:grid;gap:14px}
+ .scroll tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px;border:1px solid #dce5d7;border-radius:10px;padding:16px;background:#fcfdf9;width:100%}
+ .scroll td{display:block;min-width:0;padding:0;border:0;overflow-wrap:anywhere;line-height:1.7;font-size:15px;text-align:start}
+ .scroll td::before{display:block;color:#6e8066;font-size:11px;font-weight:600;line-height:1.6;margin-bottom:5px}
+ .scroll td.name{grid-column:1 / -1;order:-1;min-width:0;font-size:17px;line-height:1.7;padding-bottom:10px;border-bottom:1px solid #e1e8da}
+ .scroll td.name small{font-size:12px;margin-top:4px;direction:ltr;unicode-bidi:plaintext;white-space:normal}
+ .scroll td:first-child{grid-column:1 / -1;display:flex;align-items:center;gap:10px;justify-content:space-between}
+ .scroll td:first-child::before{content:'Account';margin:0;font-size:12px}
+ .scroll td:nth-child(3)::before{content:'Monthly points · LBP'}
+ .scroll td:nth-child(4)::before{content:'Accumulated balance · LBP'}
+ .scroll td:nth-child(5)::before{content:'WhatsApp number'}
+ .scroll td:nth-child(5),.scroll td:last-child{grid-column:1 / -1}
+ .scroll td input[type=tel]{width:100%;max-width:100%;font-size:16px;min-height:46px;background:white}
+ .scroll td input[type=checkbox]{width:23px;height:23px;margin:0}
+ .scroll td:last-child{display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px solid #e1e8da;padding-top:12px}
+ .scroll td:last-child::before{content:'Status / action';width:100%}
+ .scroll td:last-child>br{display:none}
+ .scroll td:last-child button{flex:1;min-width:100px;white-space:normal;min-height:46px;font-size:13px}
+ .pill{font-size:12px;white-space:normal;line-height:1.6;padding:5px 9px}
+ .scroll table:not(:has(thead th:nth-child(6))) td:nth-child(3){grid-column:1 / -1}
+ .scroll table:not(:has(thead th:nth-child(6))) td:nth-child(3)::before{content:'WhatsApp number'}
+ .scroll table:not(:has(thead th:nth-child(6))) td:nth-child(4){grid-column:1 / -1}
+ .scroll table:not(:has(thead th:nth-child(6))) td:nth-child(4)::before{content:'Status'}
+ .scroll table:not(:has(thead th:nth-child(6))) td:nth-child(5)::before{content:'Action'}
+ .scroll table:not(:has(thead th:nth-child(6))) td:first-child::before{content:'Follow up?'}
+ .scroll td.empty{grid-column:1 / -1;padding:24px 4px;text-align:center;justify-content:center;font-size:14px}
+ .scroll td.empty::before{display:none}
+ footer{gap:12px;flex-wrap:wrap;font-size:10px;line-height:1.7;margin:24px 0}
+ dialog{width:calc(100% - 24px);max-width:520px;max-height:calc(100dvh - 24px);padding:22px;overflow-y:auto;overscroll-behavior:contain}
+ dialog h2{font-size:20px;line-height:1.5}
+ dialog p{font-size:14px;line-height:1.8}
+ dialog pre{font-size:17px;line-height:1.9;padding:16px;overflow-wrap:anywhere}
+ dialog .primary{display:flex;align-items:center;justify-content:center;width:100%;font-size:15px;text-align:center}
+ dialog .actionRow{flex-wrap:wrap}
+ #toast,html[dir=rtl] #toast{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));max-width:none;line-height:1.7;padding:12px 16px;max-height:35dvh;overflow:auto}
+ #authScreen{min-height:100dvh;padding:16px}
+ .authCard{padding:26px 22px;width:100%;max-width:440px}
+ .authCard h1{font-size:25px;line-height:1.5}
+ .authCard label{font-size:14px}
+ .authCard p{font-size:14px;line-height:1.8}
+ .authCard input,.authCard .primary{min-height:48px;font-size:16px}
+ html[lang=ar] .scroll td:first-child::before{content:'الحساب'}
+ html[lang=ar] .scroll td:nth-child(3)::before{content:'نقاط الشهر · ل.ل'}
+ html[lang=ar] .scroll td:nth-child(4)::before{content:'الرصيد المتراكم · ل.ل'}
+ html[lang=ar] .scroll td:nth-child(5)::before{content:'رقم واتساب'}
+ html[lang=ar] .scroll td:last-child::before{content:'الحالة / الإجراء'}
+ html[lang=ar] .scroll table:not(:has(thead th:nth-child(6))) td:first-child::before{content:'متابعة؟'}
+ html[lang=ar] .scroll table:not(:has(thead th:nth-child(6))) td:nth-child(3)::before{content:'رقم واتساب'}
+ html[lang=ar] .scroll table:not(:has(thead th:nth-child(6))) td:nth-child(4)::before{content:'الحالة'}
+ html[lang=ar] .scroll table:not(:has(thead th:nth-child(6))) td:nth-child(5)::before{content:'الإجراء'}
+}
+@media(min-width:601px) and (max-width:900px){
+ aside[data-menu-open=true] nav{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .intro{flex-direction:row;align-items:center;justify-content:space-between}
+ .period{width:210px;flex-shrink:0}
+ .toolbar{grid-template-columns:minmax(0,1fr) minmax(180px,auto)}
+ .scroll tbody{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:370px){main,html[dir=rtl] main{padding-inline:12px}.headerActions{gap:5px}.headerActions button,#languageSwitch{padding-inline:9px;font-size:11px}.stat{padding:12px}.scroll{padding-inline:10px}.scroll tr{padding:13px}}
